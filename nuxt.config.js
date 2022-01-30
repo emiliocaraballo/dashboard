@@ -5,6 +5,10 @@ export default {
    ** See https://nuxtjs.org/api/configuration-mode
    */
   ssr: false,
+  server:{
+    port: process.env.VUE_APP_PORT || 3002,
+    host: process.env.VUE_APP_HOST || 'localhost'
+  },
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -39,6 +43,7 @@ export default {
    */
   plugins: [
     '~/plugins/fakeauth.js',
+    // '~/plugins/sweetalert2.js',
     "~/plugins/fireauth.js",
     '~/plugins/i18n.js',
     "~/plugins/simplebar.js",
@@ -64,11 +69,17 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    "@nuxtjs/dotenv",
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
     // Doc: https://github.com/nuxt/content
-    "@nuxt/content"
+    "@nuxt/content",
+    'vue-sweetalert2/nuxt'
   ],
+  sweetalert: {
+    confirmButtonColor: '#5b73e8',
+    cancelButtonColor: '#ff7674'
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
@@ -89,5 +100,6 @@ export default {
     message: process.env.VUE_APP_MESSAGINGSENDERID,
     appid: process.env.VUE_APP_APPId,
     measurement: process.env.VUE_APP_MEASUREMENTID,
-  }
+  },
+  generate: { fallback: '404.html' }
 };

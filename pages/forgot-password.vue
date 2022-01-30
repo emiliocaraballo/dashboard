@@ -1,22 +1,22 @@
 <script>
 import { required, email } from "vuelidate/lib/validators";
-
+import { UserService } from './../services/index';
 /**
  * Forgot Password component
  */
 export default {
   layout: "auth",
+  middleware: 'notauth',
   head() {
     return {
-      title: `Forgot Password | Nuxtjs Responsive Bootstrap 5 Admin Dashboard`,
+      title: `¿Has olvidado tu contraseña? -`+this.nameProyect,
     };
   },
   data() {
     return {
       email: "",
       submitted: false,
-      error: null,
-      title: "Recoverpwd",
+      error: null
     };
   },
   validations: {
@@ -25,10 +25,15 @@ export default {
       email,
     },
   },
+  computed:{
+    nameProyect(){
+      return process.env.NAME_PROYECT;
+    }
+  },
   methods: {
     // Try to register the user in with the email, fullname
     // and password they provided.
-    tryToReset() {
+   async Reset() {
       this.submitted = true;
       // stop here if form is invalid
       this.$v.$touch();
@@ -36,27 +41,23 @@ export default {
       if (this.$v.$invalid) {
         return;
       } else {
-        if (process.env.auth === "firebase") {
-          this.tryingToReset = true;
-          // Reset the authError if it existed.
-          this.error = null;
-          return (
-            this.$store
-              .dispatch("auth/resetPassword", {
-                email: this.email,
-              })
-              // eslint-disable-next-line no-unused-vars
-              .then((token) => {
-                this.tryingToReset = false;
-                this.isResetError = false;
-              })
-              .catch((error) => {
-                this.tryingToReset = false;
-                this.error = error ? error : "";
-                this.isResetError = true;
-              })
-          );
-        }
+           const data=await UserService.recoverPassword(this.email);
+           if(data.data.code==1){
+                this.email="";
+                this.submitted=false;
+                this.$swal({
+                    icon: 'success',
+                    timer: 15000,
+                    title: 'Solicitud enviada',
+                    text: 'Por favor revice el correo electronico.',
+                });
+            }else{
+                this.submitted=false;
+                this.$swal({
+                    icon: 'warning',
+                    text: data.data.message,
+                });
+            }
       }
     },
   },
@@ -92,17 +93,17 @@ export default {
               <div class="card">
                 <div class="card-body p-4">
                   <div class="text-center mt-2">
-                    <h5 class="text-primary">Reset Password</h5>
-                    <p class="text-muted">Reset Password with Minible.</p>
+                    <h5 class="text-primary">Restablecer la contraseña</h5>
+                    <p class="text-muted">Restablecer contraseña con {{nameProyect}}.</p>
                   </div>
                   <div class="p-2 mt-4">
                     <div
                       class="alert alert-success text-center mb-4"
                       role="alert"
                     >
-                      Enter your Email and instructions will be sent to you!
+                      ¡Ingrese su correo electrónico y se le enviarán las instrucciones!
                     </div>
-                    <form @submit.prevent="tryToReset">
+                    <form @submit.prevent="Reset">
                       <div class="mb-3">
                         <label for="useremail">Email</label>
                         <input
@@ -110,7 +111,7 @@ export default {
                           v-model="email"
                           class="form-control"
                           id="useremail"
-                          placeholder="Enter email"
+                          placeholder="Ingrese email"
                           :class="{
                             'is-invalid': submitted && $v.email.$error,
                           }"
@@ -120,27 +121,27 @@ export default {
                           class="invalid-feedback"
                         >
                           <span v-if="!$v.email.required"
-                            >Email is required.</span
+                            >Email es requerido.</span
                           >
                           <span v-if="!$v.email.email"
-                            >Please enter valid email.</span
+                            >Por favor introduzca un correo electrónico válido.</span
                           >
                         </div>
                       </div>
                       <div class="form-group row mb-0">
                         <div class="col-12 text-end">
-                          <button class="btn btn-primary w-sm" type="submit">
-                            Reset
+                          <button class="btn btn-primary w-sm" type="submit" :disabled="submitted">
+                            <i class="fa fa-spinner fa-spin" v-if="submitted"></i>Enviar
                           </button>
                         </div>
                       </div>
                       <div class="mt-4 text-center">
                         <p class="mb-0">
-                          Remember It ?
+                          Recuerdalo ?
                           <nuxt-link
-                            to="/account/login"
+                            to="/login"
                             class="fw-medium text-primary"
-                            >Signin</nuxt-link
+                            >Iniciar sesión</nuxt-link
                           >
                         </p>
                       </div>

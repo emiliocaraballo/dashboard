@@ -39,7 +39,7 @@ export const actions = {
         dispatch("modules/notification/success", "Registration successful", {
           root: true
         });
-        this.$router.push({ path: "/account/login" });
+        this.$router.push({ path: "/login" });
       },
       error => {
         commit("registerFailure", error);
