@@ -29,8 +29,8 @@ class UserService extends BaseService {
   }
 
   // crear Usuarios
-  createUser(data,token,id){
-    return this.AnyToken(token,id,"users/create","POST",{
+  createUser(data){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"users/create","POST",{
       name:data.name,
       last_name:data.last_name,
       identification:data.identification,
@@ -44,11 +44,11 @@ class UserService extends BaseService {
   }
 
   // ver todo los perfiles
-  getProfile(token,id){
-    return this.AnyToken(token,id,"role","GET",{});
+  getProfile(){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"role","GET",{});
   }
-  getUserMe(token,id){
-    return this.AnyToken(token,id,"users/me","GET",{});
+  getUserMe(){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"users/me","GET",{});
   }
 
 }

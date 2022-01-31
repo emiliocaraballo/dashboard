@@ -43,7 +43,6 @@ export default {
    */
   plugins: [
     '~/plugins/fakeauth.js',
-    // '~/plugins/sweetalert2.js',
     "~/plugins/fireauth.js",
     '~/plugins/i18n.js',
     "~/plugins/simplebar.js",

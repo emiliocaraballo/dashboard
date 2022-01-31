@@ -5,8 +5,8 @@ class MenuService extends BaseService {
     super();
   }
 
-  createRole(menu_active,role,token,id){
-    return this.AnyToken(token,id,"role","POST",{
+  createRole(menu_active,role){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"role","POST",{
       menu:menu_active,
       title:role.title,
       description:role.description,
@@ -14,8 +14,8 @@ class MenuService extends BaseService {
     });
   }
 
-  updateRole(menu_active,role,token,id){
-    return this.AnyToken(token,id,"role","PUT",{
+  updateRole(menu_active,role){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"role","PUT",{
       menu:menu_active,
       id:role.id,
       title:role.title,
@@ -24,28 +24,28 @@ class MenuService extends BaseService {
     });
   }
 
-  getMenu(token,id) {
-    return this.AnyToken(token,id,"menus","GET",{});
+  getMenu() {
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"menus","GET",{});
   }
 
-  getMenuRole(token,id) {
-    return this.AnyToken(token,id,"menus/role","GET",{});
+  getMenuRole() {
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"menus/role","GET",{});
   }
 
-  getRole(token,id) {
-    return this.AnyToken(token,id,"role","GET",{});
+  getRole() {
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"role","GET",{});
   }
 
-  createMenu(data,token,id){
-    return this.AnyToken(token,id,"menus","POST",data);
+  createMenu(data){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"menus","POST",data);
   }
 
-  updateMenu(data,token,id){
-    return this.AnyToken(token,id,"menus","PUT",data);
+  updateMenu(data){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"menus","PUT",data);
   }
 
-  deleteMenu(sequence,token,id){
-    return this.AnyToken(token,id,"menus/"+sequence,"DELETE",{});
+  deleteMenu(sequence){
+    return this.AnyToken(localStorage.getItem("token"),localStorage.getItem("id"),"menus/"+sequence,"DELETE",{});
   }
 }
 
