@@ -12,30 +12,10 @@ export default {
       menuItems: menuItems,
       languages: [
         {
-          flag: require("~/assets/images/flags/us.jpg"),
-          language: "en",
-          title: "English",
-        },
-        {
-          flag: require("~/assets/images/flags/french.jpg"),
-          language: "fr",
-          title: "French",
-        },
-        {
           flag: require("~/assets/images/flags/spain.jpg"),
           language: "es",
           title: "spanish",
-        },
-        {
-          flag: require("~/assets/images/flags/china.png"),
-          language: "zh",
-          title: "Chinese",
-        },
-        {
-          flag: require("~/assets/images/flags/arabic.png"),
-          language: "ar",
-          title: "Arabic",
-        },
+        }
       ],
       current_language: this.$i18n.locale,
       text: null,
@@ -222,7 +202,7 @@ export default {
     logoutUser() {
       this.logout();
       this.$router.push({
-        path: "/account/login",
+        path: "/login",
       });
     },
   },
@@ -374,69 +354,7 @@ export default {
           </b-dropdown-item>
         </b-dropdown>
 
-        <b-dropdown
-          variant="white"
-          class="d-none d-lg-inline-block ms-1"
-          toggle-class="header-item noti-icon"
-          right
-          menu-class="dropdown-menu-lg dropdown-menu-end"
-        >
-          <template v-slot:button-content>
-            <i class="uil-apps"></i>
-          </template>
-          <div class="px-lg-2">
-            <div class="row no-gutters">
-              <div class="col">
-                <a class="dropdown-icon-item" href="#">
-                  <img src="~/assets/images/brands/github.png" alt="Github" />
-                  <span>{{ $t("navbar.dropdown.site.list.github") }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="#">
-                  <img
-                    src="~/assets/images/brands/bitbucket.png"
-                    alt="bitbucket"
-                  />
-                  <span>{{ $t("navbar.dropdown.site.list.bitbucket") }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="#">
-                  <img
-                    src="~/assets/images/brands/dribbble.png"
-                    alt="dribbble"
-                  />
-                  <span>{{ $t("navbar.dropdown.site.list.dribbble") }}</span>
-                </a>
-              </div>
-            </div>
 
-            <div class="row no-gutters">
-              <div class="col">
-                <a class="dropdown-icon-item" href="#">
-                  <img src="~/assets/images/brands/dropbox.png" alt="dropbox" />
-                  <span>{{ $t("navbar.dropdown.site.list.dropbox") }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="#">
-                  <img
-                    src="~/assets/images/brands/mail_chimp.png"
-                    alt="mail_chimp"
-                  />
-                  <span>{{ $t("navbar.dropdown.site.list.mailchimp") }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="#">
-                  <img src="~/assets/images/brands/slack.png" alt="slack" />
-                  <span>{{ $t("navbar.dropdown.site.list.slack") }}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </b-dropdown>
 
         <div class="dropdown d-none d-lg-inline-block ms-1">
           <button

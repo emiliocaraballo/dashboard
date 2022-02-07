@@ -2,21 +2,21 @@
 /**
  * Footer component
  */
-export default {};
+export default {
+
+  // computed:{
+  //   titleproyect(){
+  //     return process.env.ADMIN;
+  //   }
+  // }
+};
 </script>
 
 <template>
 <footer class="footer">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">{{ new Date().getFullYear()}} © Minible.</div>
-            <div class="col-sm-6">
-                <div class="text-sm-end d-none d-sm-block">
-                    Crafted with
-                    <i class="mdi mdi-heart text-danger"></i> by
-                    <a href="https://themesbrand.com/" target="_blank" class="text-reset">Themesbrand</a>
-                </div>
-            </div>
+        <div class="row justify-content-end">
+            <div class="col-sm-12 d-flex justify-content-end">Copyright {{ new Date().getFullYear()}} © Todos los derechos reservados.</div>
         </div>
     </div>
 </footer>
