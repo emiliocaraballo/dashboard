@@ -263,6 +263,7 @@ export default {
 
 
 <style scoped>
-@import url('"~/assets/css/line.css');
+/*@import url('~~/assets/css/line.css');*/
+/*@import url('https://unicons.iconscout.com/release/v3.0.0/css/line.css');*/
 
 </style>
