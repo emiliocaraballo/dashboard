@@ -44,7 +44,8 @@
   },
   "menuitems": {
     "menu": {
-      "text": "Menu"
+      "text": "Menu",
+      "badge": "01"
     },
     "dashboard": {
       "text": "Dashboard",
@@ -52,6 +53,9 @@
     },
     "apps": {
       "text": "Apps"
+    },
+    "profile": {
+      "text": "Profile"
     }
   }
 }

@@ -18,5 +18,25 @@ export const menuItems = [
         id: 3,
         label: "menuitems.apps.text",
         isTitle: true
-    }
+    },
+    {
+      id: 4,
+      label: "menuitems.menu.text",
+      icon: "uil-home-alt",
+      // badge: {
+      //     variant: "info",
+      //     text: "menuitems.menu.badge"
+      // },
+      link: "/menu"
+  },
+  {
+    id: 5,
+    label: "menuitems.profile.text",
+    icon: "uil-home-alt",
+    // badge: {
+    //     variant: "info",
+    //     text: "menuitems.menu.badge"
+    // },
+    link: "/menu"
+},
 ];
