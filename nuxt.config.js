@@ -26,9 +26,37 @@ export default {
         hid: "description",
         name: "description",
         content: "Responsive Bootstrap 5 Admin Dashboard"
-      }
+      },
+      {
+        hid: "author",
+        name: "author",
+        content:process.env.NAME_PROYECT
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:""
+      },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "#50a5f1" },
+      { name: "apple-mobile-web-app-title", content: process.env.TITLE }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "manifest", href: "/manifest.json" },
+      {
+        rel: "apple-touch-icon",
+        type: "image/x-icon",
+        href: "/logo-sm.png"
+      },
+
+    ],
+    // script:[
+    //   {
+    //     src:"/app.js"
+    //   }
+    // ]
+
   },
   router: {
     // linkExactActiveClass: 'active'
@@ -100,5 +128,13 @@ export default {
     appid: process.env.VUE_APP_APPId,
     measurement: process.env.VUE_APP_MEASUREMENTID,
   },
-  generate: { fallback: '404.html' }
+  generate: { fallback: '404.html' },
+  // pwa: {
+  //   icon: false,
+  //   manifest: {
+  //     name: 'My Awesome App',
+  //     lang: 'fa',
+  //     useWebmanifestExtension: false
+  //   }
+  // }
 };

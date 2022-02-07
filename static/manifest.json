@@ -1,0 +1,45 @@
+{
+  "name": "Coder intelligence",
+  "short_name": "Coder intelligence",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+          "src": "/logo-sm.png",
+          "sizes": "48x48",
+          "type": "image/png",
+          "purpose": "any maskable"
+      },
+      {
+          "src": "/logo-sm.png",
+          "sizes": "72x72",
+          "type": "image/png",
+          "purpose": "any maskable"
+      },
+      {
+          "src": "/logo-sm.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any maskable"
+      },
+      {
+          "src": "/logo-sm.png",
+          "sizes": "144x144",
+          "type": "image/png",
+          "purpose": "any maskable"
+      },
+      {
+          "src": "/logo-sm.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any maskable"
+      }
+  ],
+  "theme_color": "#fff",
+  "background_color": "#e65050",
+  "description": "Coder intelligence",
+  "scope": "/",
+  "lang": "es",
+  "dir": "auto",
+  "orientation": "portrait"
+}
