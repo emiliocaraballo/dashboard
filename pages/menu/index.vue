@@ -33,6 +33,7 @@ export default {
   data() {
     return {
       title: "Menu",
+      menus:[],
       items: [
         {
           text: "Utility",
@@ -44,7 +45,7 @@ export default {
         }
       ],
       centerDialogVisible: false,
-      menu: [],
+      // menu: [],
       edit: false,
       menu_selected: {
         id: 0,
@@ -71,16 +72,16 @@ export default {
       }
     };
   },
-  created() {
-    this.loadingMenu();
+  async created() {
+     await this.$store.dispatch('menu/fetchMenu');
+     this.menus=this.$store.getters['menu/getMenu'];
+  },
+  watch:{
+      menu() {
+        return 1111;
+      }
   },
   methods: {
-    async loadingMenu() {
-      try {
-        const data = await MenuService.getMenu();
-        this.menu = data.data.menu;
-      } catch (error) {}
-    },
     handleNodeClick(data) {
       var datos = data;
       this.menu_selected = datos;
@@ -109,11 +110,7 @@ export default {
         this.form.status = this.menu_selected.status;
       } else if (action == 2) {
         this.form.id = this.menu_selected.id;
-        MenuService.deleteMenu(
-          this.form.id,
-          this.$store.getters["getToken"],
-          this.$store.getters["getId"]
-        ).then(response => {
+        MenuService.deleteMenu(this.form.id).then(response => {
           const data = response.data;
           if (data.code == 1) {
             // eliminado con exito
@@ -131,6 +128,7 @@ export default {
             return;
           }
         });
+
       }
 
       this.title = title;
@@ -149,9 +147,7 @@ export default {
                 description: this.form.description,
                 status: this.form.status == true ? 1 : 0,
                 url: this.form.path
-              },
-              this.$store.getters["getToken"],
-              this.$store.getters["getId"]
+              }
             );
           } else {
             data = await MenuService.createMenu(
@@ -163,9 +159,7 @@ export default {
                 description: this.form.description,
                 status: this.form.status == true ? 1 : 0,
                 url: this.form.path
-              },
-              this.$store.getters["getToken"],
-              this.$store.getters["getId"]
+              }
             );
           }
           this.centerDialogVisible = false;
@@ -217,8 +211,9 @@ export default {
             >Eliminar Menu</el-button
           >
         </div>
+        {{menu}}
         <el-tree
-          :data="menu"
+          :data="menus"
           :props="defaultProps"
           @node-click="handleNodeClick"
           :default-expand-all='true'

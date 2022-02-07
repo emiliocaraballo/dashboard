@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<doc cf="1" id="14811060028" n_r="1" vf="4"><dsig:Signature Id="Signature001" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:SignedInfo><dsig:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><dsig:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><dsig:Reference URI=""><dsig:Transforms><dsig:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></dsig:Transforms><dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><dsig:DigestValue>gjBuR8AmRi6wLrLcR+vd16ORVu4=</dsig:DigestValue></dsig:Reference><dsig:Reference URI="#KeyInfo001"><dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><dsig:DigestValue>GK7YYlQevgxQJeu20PZNOwoP0pQ=</dsig:DigestValue></dsig:Reference></dsig:SignedInfo><dsig:SignatureValue>IZG9ltnCJHj50FURYX4j2vna3E/02b+B1ncWh4gqaJwEVk+qfcqed7GSVUu731NbmW3qgrBq1NOpxljpkYJlb7rpN5u2VpQo3ytga7Yz7BiEbVN5viIfitb05ThwRJx++ysHfhvNfVTN+CH/9u6veqG5npssjMZJrySfJi8jEw43xTDTqJ61vdeIVvFM6fAUQG61CYKNoy2TYAmDgkHJ7yViilloscTBcyPfW6IEVXA5bMYhS2c3Rf1l8qvybcBLVaua0VgZ24ZWNoa+RO4yqlOnn5q5lIzjJg8yPbxaOnf+ob0yz24jkwxnsz6q9IFbF/PykoeeGKub4pohF3WKPA==</dsig:SignatureValue><dsig:KeyInfo Id="KeyInfo001"><dsig:X509Data><dsig:X509Certificate>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</dsig:X509Certificate></dsig:X509Data></dsig:KeyInfo><dsig:Object><dsig:SignatureProperties><dsig:SignatureProperty Id="TimestampId" Target="Signature001"><wsu:Timestamp xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility"><wsu:Created>2022-02-07T11:52:58</wsu:Created></wsu:Timestamp></dsig:SignatureProperty></dsig:SignatureProperties></dsig:Object></dsig:Signature>
+  <gr id="1">
+    <oc id="1">
+      <cs id="2" v="10810088"/>
+      <cs id="4" v="14811060028"/>
+      <cs id="5" v="1001972281"/>
+      <cs id="6" v="8"/>
+      <cs id="12" v="1051068"/>
+      <cs id="14" v="46,6201,-1;"/>
+      <cs id="21" v="1"/>
+      <cs id="22" v="1"/>
+      <cs id="23" v="1"/>
+      <cs id="24" v="2"/>
+      <cs id="25" v="10910094"/>
+      <cs id="26" v="1001972281"/>
+      <cs id="27" v="20161019"/>
+      <cs id="28" v="1071043"/>
+      <cs id="29" v="1081003"/>
+      <cs id="30" v="1091158"/>
+      <cs id="31" v="CARABALLO"/>
+      <cs id="32" v="DUEÑAS"/>
+      <cs id="33" v="EMILIO "/>
+      <cs id="34" v="FERNANDO"/>
+      <cs id="35" v=""/>
+      <cs id="36" v=""/>
+      <cs id="37" v=""/>
+      <cs id="38" v="1071043"/>
+      <cs id="39" v="1081003"/>
+      <cs id="40" v="1091158"/>
+      <cs id="41" v="BRR REPUBLICA DE CHILE MZ 24 LT 2"/>
+      <cs id="42" v="emiliofernando981007@gmail.com"/>
+      <cs id="43" v=""/>
+      <cs id="44" v="3042334893"/>
+      <cs id="45" v=""/>
+      <cs id="46" v="1338"/>
+      <cs id="47" v="20190801"/>
+      <cs id="48" v=""/>
+      <cs id="49" v=""/>
+      <cc id="50">
+        <it id="1" v=""/>
+        <it id="2" v=""/>
+      </cc>
+      <cs id="51" v=""/>
+      <cs id="52" v=""/>
+      <cc id="53">
+        <it id="1" v="49"/>
+      </cc>
+      <cc id="54"/>
+      <cs id="55" v=""/>
+      <cs id="56" v=""/>
+      <cc id="57"/>
+      <cc id="58"/>
+      <cs id="59" v="2"/>
+      <cs id="60" v="0"/>
+      <cs id="61" v="20220207115258"/>
+      <cs id="984" v="CARABALLO DUEÑAS EMILIO FERNANDO "/>
+      <cs id="985" v="CONTRIBUYENTE"/>
+    </oc>
+  </gr>
+  <gr id="2">
+    <oc id="1">
+      <cs id="2" v="10810088"/>
+      <cs id="4" v="14811060028"/>
+      <cs id="5" v="1001972281"/>
+      <cs id="6" v="8"/>
+      <cs id="12" v="1051068"/>
+      <cs id="14" v=""/>
+      <cs id="21" v="2"/>
+      <cs id="22" v="1"/>
+      <cs id="23" v="1"/>
+      <cs id="62" v=""/>
+      <cs id="63" v=""/>
+      <cs id="64" v=""/>
+      <cs id="65" v=""/>
+      <cs id="66" v=""/>
+      <cs id="67" v=""/>
+      <cs id="68" v=""/>
+      <cs id="69" v=""/>
+      <cs id="70" v=""/>
+      <cc id="71"/>
+      <cc id="72"/>
+      <cc id="73"/>
+      <cc id="74"/>
+      <cc id="75"/>
+      <cc id="76"/>
+      <cc id="77"/>
+      <cc id="78"/>
+      <cc id="79"/>
+      <cc id="80"/>
+      <cc id="81"/>
+      <cs id="82" v=""/>
+      <cs id="83" v=""/>
+      <cs id="84" v=""/>
+      <cs id="85" v=""/>
+      <cs id="86" v=""/>
+      <cs id="87" v=""/>
+      <cs id="88" v=""/>
+      <cc id="89"/>
+      <cc id="90"/>
+      <cc id="91"/>
+      <cc id="92"/>
+      <cs id="93" v=""/>
+      <cs id="94" v=""/>
+      <cs id="95" v=""/>
+      <cs id="96" v=""/>
+      <cs id="97" v=""/>
+      <cs id="170" v=""/>
+      <cs id="171" v=""/>
+      <cs id="172" v=""/>
+      <cs id="173" v=""/>
+    </oc>
+  </gr>
+  <gr id="3">
+    <oc id="1">
+      <cs id="2" v="10810088"/>
+      <cs id="4" v="14811060028"/>
+      <cs id="5" v=""/>
+      <cs id="6" v=""/>
+      <cs id="12" v="1051068"/>
+      <cs id="14" v=""/>
+      <cs id="21" v="3"/>
+      <cs id="22" v="1"/>
+      <cs id="23" v="1"/>
+      <cc id="98"/>
+      <cc id="99"/>
+      <cc id="100"/>
+      <cc id="101"/>
+      <cc id="102"/>
+      <cc id="103"/>
+      <cc id="104"/>
+      <cc id="105"/>
+      <cc id="106"/>
+      <cc id="107"/>
+      <cc id="108"/>
+      <cc id="109"/>
+      <cc id="110"/>
+    </oc>
+  </gr>
+  <gr id="4">
+    <oc id="1">
+      <cs id="2" v="10810088"/>
+      <cs id="4" v="14811060028"/>
+      <cs id="5" v="1001972281"/>
+      <cs id="6" v="8"/>
+      <cs id="12" v="1051068"/>
+      <cs id="14" v=""/>
+      <cs id="21" v="4"/>
+      <cs id="22" v="1"/>
+      <cs id="23" v="1"/>
+      <cc id="111"/>
+      <cc id="112"/>
+      <cc id="113"/>
+      <cc id="114"/>
+      <cc id="115"/>
+      <cc id="116"/>
+      <cc id="117"/>
+      <cc id="118"/>
+      <cc id="119"/>
+      <cc id="120"/>
+      <cc id="121"/>
+      <cc id="122"/>
+      <cc id="123"/>
+    </oc>
+  </gr>
+  <gr id="5">
+    <oc id="1">
+      <cs id="2" v="10810088"/>
+      <cs id="4" v="14811060028"/>
+      <cs id="5" v="1001972281"/>
+      <cs id="6" v="8"/>
+      <cs id="12" v="1051068"/>
+      <cs id="14" v=""/>
+      <cs id="21" v="5"/>
+      <cs id="22" v="1"/>
+      <cs id="23" v="1"/>
+      <cs id="124" v=""/>
+      <cs id="125" v=""/>
+      <cs id="126" v=""/>
+      <cs id="127" v=""/>
+      <cs id="128" v=""/>
+      <cs id="129" v=""/>
+      <cs id="130" v=""/>
+      <cs id="131" v=""/>
+      <cs id="132" v=""/>
+      <cs id="133" v=""/>
+      <cs id="134" v=""/>
+      <cs id="135" v=""/>
+      <cs id="136" v=""/>
+      <cs id="137" v=""/>
+      <cs id="138" v=""/>
+      <cs id="139" v=""/>
+      <cs id="140" v=""/>
+      <cs id="141" v=""/>
+      <cs id="142" v=""/>
+      <cs id="143" v=""/>
+      <cs id="144" v=""/>
+      <cs id="145" v=""/>
+      <cs id="146" v=""/>
+      <cs id="147" v=""/>
+      <cs id="148" v=""/>
+      <cs id="149" v=""/>
+      <cs id="150" v=""/>
+      <cs id="151" v=""/>
+      <cs id="152" v=""/>
+      <cs id="153" v=""/>
+      <cs id="154" v=""/>
+      <cs id="155" v=""/>
+      <cs id="156" v=""/>
+      <cs id="157" v=""/>
+      <cs id="158" v=""/>
+      <cs id="159" v=""/>
+    </oc>
+  </gr>
+  <gr id="6">
+    <oc id="1">
+      <cs id="2" v="10810088"/>
+      <cs id="4" v="14811060028"/>
+      <cs id="5" v="1001972281"/>
+      <cs id="6" v="8"/>
+      <cs id="12" v="1051068"/>
+      <cs id="14" v=""/>
+      <cs id="21" v="6"/>
+      <cs id="22" v="1"/>
+      <cs id="23" v="1"/>
+      <cc id="160"/>
+      <cc id="161"/>
+      <cc id="162"/>
+      <cc id="163"/>
+      <cc id="164"/>
+      <cc id="165"/>
+      <cc id="166"/>
+      <cc id="167"/>
+      <cc id="168"/>
+      <cc id="169"/>
+    </oc>
+  </gr>
+  <gr id="7">
+    <oc id="1">
+      <cs id="2" v="10810088"/>
+      <cs id="4" v="14811060028"/>
+      <cs id="5" v=""/>
+      <cs id="6" v=""/>
+      <cs id="12" v="1051068"/>
+      <cs id="14" v=""/>
+      <cs id="21" v="7"/>
+      <cs id="22" v="1"/>
+      <cs id="23" v="1"/>
+      <cc id="89"/>
+      <cc id="90"/>
+      <cc id="91"/>
+      <cc id="92"/>
+    </oc>
+  </gr>
+</doc>
